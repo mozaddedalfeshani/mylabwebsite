@@ -1,18 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>My Awesome Website</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+    }
+
+    .hero-section {
+      background: url('https://via.placeholder.com/1500x600.png?text=Welcome+to+Our+Site') no-repeat center center;
+      background-size: cover;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .hero-section h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+    }
+
+    .hero-section p {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+    }
+
+    .feature-icon {
+      font-size: 3rem;
+      color: #0d6efd;
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
 </head>
+
 <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">MyWebsite</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -23,51 +59,88 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+            <a class="nav-link" href="input.html">Input Page</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="registration.html">Register</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-outline-light" type="submit">Search</button>
         </form>
       </div>
     </div>
   </nav>
 
-  <div class="container mt-5">
-    <h1>Welcome to the Bootstrap Example</h1>
-    <p>This is a simple example of a Bootstrap layout.</p>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Launch demo modal
-    </button>
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="container">
+      <h1>Welcome to My Awesome Website!</h1>
+      <p>Discover amazing things and explore our features.</p>
+      <a href="registration.html" class="btn btn-primary btn-lg">Get Started</a>
+      <a href="#features" class="btn btn-outline-light btn-lg ms-2">Learn More</a>
+    </div>
   </div>
+
+  <div class="container mt-5 mb-5">
+    <div class="text-center mb-5">
+      <h2>Key Features</h2>
+      <p class="lead">Here's what makes our platform great.</p>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="p-3">
+          <i class="bi bi-speedometer2 feature-icon mb-3"></i> <!-- Example Bootstrap Icon -->
+          <h3>Fast Performance</h3>
+          <p>Experience lightning-fast interactions and seamless navigation.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="p-3">
+          <i class="bi bi-shield-lock feature-icon mb-3"></i> <!-- Example Bootstrap Icon -->
+          <h3>Secure Platform</h3>
+          <p>Your data is safe with our top-notch security measures.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="p-3">
+          <i class="bi bi-people feature-icon mb-3"></i> <!-- Example Bootstrap Icon -->
+          <h3>User Friendly</h3>
+          <p>Intuitive design for an easy and enjoyable user experience.</p>
+        </div>
+      </div>
+    </div>
+    <hr class="my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2>Explore Our Content</h2>
+        <p>This is a simple example of a Bootstrap layout. We have various sections and tools you can use.</p>
+        <a href="input.html" class="btn btn-info">Go to Input Page</a>
+        <button type="button" class="btn btn-secondary ms-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Launch Demo Modal
+        </button>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="https://th.bing.com/th/id/OIP.vlD09ruoeI6pgB4WB24U2QHaFj?cb=iwc2&rs=1&pid=ImgDetMain"
+          class="img-fluid rounded shadow-lg" alt="Responsive image" style="max-height: 300px;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal (kept from original) -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body
-">
-          This is a simple modal example using Bootstrap.
+        <div class="modal-body">
+          This is a simple modal example using Bootstrap. You can put any content here.
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -76,5 +149,14 @@
       </div>
     </div>
   </div>
+
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container text-center">
+      <span class="text-muted">&copy; 2025 MyWebsite. All Rights Reserved.</span>
+    </div>
+  </footer>
+  <!-- Add Bootstrap Icons CSS for feature icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 </body>
+
 </html>
